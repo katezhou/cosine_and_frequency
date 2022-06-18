@@ -11,7 +11,7 @@ Download a large corpus of text which will be used to create contextualized word
 We used tools such as wikiextractor and wiki-word-frequencies to help calculate the word frequencies of Wikipedia corpus we have. We then used word frequencies from Complex Word Identification (CWI) Shared Task 2018 project as a way to estimate BookCorpus word frequencies(https://github.com/nathanshartmann/NILC-at-CWI-2018). We combined both frequencies ```calculate_bert_word_frequencies.ipynb``` and the resulting file ```bert_word_frequencies.csv```.
 
 3. **Preprocess WiC, SCWS data**
-Download the train and dev datsets for WiC (placed in ```WiC_data```. Preprocess data ```pre_processing_wic.ipynb```. Download the train and dev datsets for SCWS (placed in ```SCWS_data```). Preprocess data using the file: ```scws_embeddings.ipynb```
+Download the train and dev datsets for WiC (place in a folder called ```WiC_data```. Preprocess data ```pre_processing_wic.ipynb```. Download the train and dev datsets for SCWS (place in a folder called ```SCWS_data```). Preprocess data using the file: ```scws_embeddings.ipynb```
 
 4. **Create contextualized word embeddings for sentences for the WiC dataset**
 This involves embedding the entire sentence and then extract the word embedding associated with the word of interest. We then used Hugging Face's library to create contexutalized word embeddings. See file: ```utils/create_embeddings/creating_word_embeddings.py```. Analyze the results ```WiC_analysis.ipynb``` and ```scws_analysis.ipynb```
